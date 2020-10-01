@@ -1,0 +1,46 @@
+@startuml Find Server
+
+Client -> Server : /api/about
+
+alt server responds
+    Server -> Client : success
+    Client -> Server : /api/getCharacters
+    Server -> Client : Array of character names
+
+else no server
+
+    Client -> Client : No Server Mode
+
+end
+
+@enduml
+
+@startuml Open Character
+
+Client -> Server : Request Character id
+
+alt Success
+
+    Server -> Client : Character Data
+
+else Failure
+
+    Server -> Client : Character Not Found
+
+end
+
+@enduml
+
+@startuml Get a character id
+
+Client -> Server : Request Character ID
+Server -> Client : Character ID
+
+@enduml
+
+@startuml Save a character
+
+Client -> Server : Save Request
+Server -> Client : Status
+
+@enduml

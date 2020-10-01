@@ -1,38 +1,162 @@
 .App {
   text-align: center;
+  vertical-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  /* animation: App-logo-spin infinite 20s linear; */
+  /* height: 80px; */
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #282828;
+  /* height: 200vh; */
   color: white;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  overflow: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.App-intro {
+  font-size: large;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.stat-box{
+  color: white;
+  font-size: inherit;
+  background: transparent;
+  border: none;
+  width: 25px;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.prof-table{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  overflow-y: auto;
+  width: 300px;
+}
+
+.reset-button{
+  border: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+
+  height: 40px;
+
+  color: white;
+  background: #111;
+
+  font-size: large;
+}
+
+.combat-panel{
+  align-items: flex-start;
+  justify-content: top;
+}
+
+.weapon-stat-button{
+  /* background-color:#111; */
+  color: white;
+  border:0;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  font-size: large;
+}
+
+
+
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 300px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+  top: -400px;
+  left: -100px;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+
+.border-top{
+  border-top: 2px solid white;
+}
+.border-left{
+  border-left: 2px solid white;
+}
+.border-right{
+  border-right: 2px solid white;
+}
+.border-bottom{
+  border-bottom: 2px solid white;
+}
+
+.border-all{
+  border: 2px solid white;
+}
+
+.full-wide{
+  width: 100%;
+}
+
+.full-high{
+  height: 100%
+}
+
+.outline{
+  outline: 2px solid white;
+}
+
+.padding-top{
+  padding-top: 5px;
+}
+
+.padding-left{
+  padding-left: 5px;
+}
+
+.padding-right{
+  padding-right: 5px;
+}
+.padding-bottm{
+  padding-bottom: 5px;
+}
+
+.padding-all{
+  padding: 5px;
 }
